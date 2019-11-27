@@ -20,7 +20,7 @@ public class SchoolRepository implements CrudDao<School> {
                         DB_URL, DB_USER, DB_PASSWORD
                 );
                 PreparedStatement statement = connection.prepareStatement(
-                        "INSERT INTO school (name, capacity, coutry) VALUES (?, ?, ?)",
+                        "INSERT INTO school (name, capacity, country) VALUES (?, ?, ?)",
                         Statement.RETURN_GENERATED_KEYS
                 );
                 statement.setString(1, school.getName());
